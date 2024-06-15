@@ -1,0 +1,128 @@
+.nav-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .close-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .action-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .action-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999; /* Ensure dropdown is above other content */
+  }
+  
+  .action-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .action-links a:hover {
+    color: #000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000; /* Ensure the navbar is above other content */
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar-nav-link {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .navbar-nav-link:hover {
+    color: #000;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .link-text {
+    display: none;
+    margin-left: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-icon {
+      display: block;
+    }
+  
+    .close-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  
+    .action-links {
+      display: none;
+    }
+  
+    .action-links.active {
+      display: flex;
+    }
+  
+    .navbar-nav {
+      display: none;
+    }
+  
+    .navbar-actions {
+      display: flex;
+    }
+  
+    .navbar-action-link .link-text {
+      display: inline;
+    }
+  }
+  
